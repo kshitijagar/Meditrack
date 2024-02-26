@@ -19,7 +19,7 @@ const Home = () => {
     const fetchTopHeadlines = async () => {
       try {
         const response = await axios.get(
-          'https://newsapi.org/v2/top-headlines?q=disease&apiKey=c26d96b6da57456e9f895855e4f10ff7'
+          'https://newsapi.org/v2/top-headlines?q=disease&apiKey=api_key'
         );
         // Check if there are articles returned
         if (response.data.articles && response.data.articles.length > 0) {

@@ -165,7 +165,7 @@ export default function App() {
     const getNearbyHospitals = async (latitude: number, longitude: number) => {
         // Use Google Places API or any other service to fetch nearby hospitals
         // Example using Google Places API (replace YOUR_xAPI_KEY with your actual API key)
-        const apiKey = 'AIzaSyDDH4irAPMes4eRowUO7d3BGWdyTPrLtdg';
+        const apiKey = 'YOUR_GOOGLE_API';
         const radius = 5000; // 5km radius
         const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=hospital&key=${apiKey}&keyword=Multispecality`;
 
@@ -244,7 +244,7 @@ export default function App() {
     const calloutPressed = async (hospital: any) => {
         try {
             // Fetch additional information about the selected hospital
-            const apiKey = 'AIzaSyDDH4irAPMes4eRowUO7d3BGWdyTPrLtdg';
+            const apiKey = 'YOUR_GOOGLE_API';
             const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${hospital.place_id}&fields=name,formatted_address,formatted_phone_number&key=${apiKey}`;
             const response = await fetch(url);
             const data = await response.json();
